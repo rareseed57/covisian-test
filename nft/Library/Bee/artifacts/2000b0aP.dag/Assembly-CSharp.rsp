@@ -273,7 +273,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.24f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.XRModule.dll"
--r:"C:/Users/rares/Desktop/covisian test/Covisian-test/Covisian-test/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"C:/Users/rares/Desktop/Covisian/covisian-test/nft/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aP.dag/Unity.VisualScripting.Core.ref.dll"
@@ -283,6 +283,9 @@
 "Assets/ClickFollower.cs"
 "Assets/ClickParent.cs"
 "Assets/Oscillate.cs"
+"Assets/SpringBone.cs"
+"Assets/SpringCollider.cs"
+"Assets/SpringManager.cs"
 -langversion:9.0
 
 /deterministic

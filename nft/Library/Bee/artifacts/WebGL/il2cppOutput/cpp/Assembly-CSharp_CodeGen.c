@@ -58,7 +58,33 @@ extern void Oscillate_Start_mD3367A6FAEE73D3C5A813C09B053DF4FC99A243E (void);
 extern void Oscillate_Update_mEE54404F535534E21A370FC7222A1CBAC41875A7 (void);
 // 0x00000017 System.Void Oscillate::.ctor()
 extern void Oscillate__ctor_m93D4C3E51142416748E2586715D9DE97BA50E516 (void);
-static Il2CppMethodPointer s_methodPointers[23] = 
+// 0x00000018 System.Void UnityChan.SpringBone::Awake()
+extern void SpringBone_Awake_m67C6D9BF088155D77238A11D0BFE9D4831003C5F (void);
+// 0x00000019 UnityChan.SpringManager UnityChan.SpringBone::GetParentSpringManager(UnityEngine.Transform)
+extern void SpringBone_GetParentSpringManager_m2EF5EEAD6A918133FD9764553417AC48DFA1FFFC (void);
+// 0x0000001A System.Void UnityChan.SpringBone::Start()
+extern void SpringBone_Start_mD3A1B5A5741C88E5F1E5E78D1F240988C6A75FE8 (void);
+// 0x0000001B System.Void UnityChan.SpringBone::UpdateSpring()
+extern void SpringBone_UpdateSpring_m563B11D579B08B95288B55147BFD689E29AFBF57 (void);
+// 0x0000001C System.Void UnityChan.SpringBone::OnDrawGizmos()
+extern void SpringBone_OnDrawGizmos_m64E49BD4101A6F6ECC5B4F2911A4D7B2F8D794E4 (void);
+// 0x0000001D System.Void UnityChan.SpringBone::.ctor()
+extern void SpringBone__ctor_m5F7CB0E2F09C896DB710A315A08D37A5B1DB71D0 (void);
+// 0x0000001E System.Void UnityChan.SpringCollider::OnDrawGizmosSelected()
+extern void SpringCollider_OnDrawGizmosSelected_m63A394E92FAEBF84C28965F8FCD500D12F27D256 (void);
+// 0x0000001F System.Void UnityChan.SpringCollider::.ctor()
+extern void SpringCollider__ctor_mA26CACF7A33B317BCA3499E2B294BB27EF72D625 (void);
+// 0x00000020 System.Void UnityChan.SpringManager::Start()
+extern void SpringManager_Start_mD305CD11707A925B1B000E6A07141999A7C1F123 (void);
+// 0x00000021 System.Void UnityChan.SpringManager::LateUpdate()
+extern void SpringManager_LateUpdate_m2FE72C1CD6E59331A9C6ADCF9387D6CC07EF0523 (void);
+// 0x00000022 System.Void UnityChan.SpringManager::UpdateParameters()
+extern void SpringManager_UpdateParameters_m6E6FA51F314E6A2A89335ECBF0A2A647956C4AFF (void);
+// 0x00000023 System.Void UnityChan.SpringManager::UpdateParameter(System.String,System.Single,UnityEngine.AnimationCurve)
+extern void SpringManager_UpdateParameter_m3FA6606799DF6E9A680B7194AB11D10875C49B64 (void);
+// 0x00000024 System.Void UnityChan.SpringManager::.ctor()
+extern void SpringManager__ctor_m8D72467F6ECC021FCCF1441AEAEDBCA5FA71C18A (void);
+static Il2CppMethodPointer s_methodPointers[36] = 
 {
 	ClickFollower_Start_mC3C7164F3FDF290F817BFB8D44D16AF98BFD6DDE,
 	ClickFollower_Update_m841753B8E9ADE9F1F938B0BCCA15ABE7462FE3F0,
@@ -83,38 +109,64 @@ static Il2CppMethodPointer s_methodPointers[23] =
 	Oscillate_Start_mD3367A6FAEE73D3C5A813C09B053DF4FC99A243E,
 	Oscillate_Update_mEE54404F535534E21A370FC7222A1CBAC41875A7,
 	Oscillate__ctor_m93D4C3E51142416748E2586715D9DE97BA50E516,
+	SpringBone_Awake_m67C6D9BF088155D77238A11D0BFE9D4831003C5F,
+	SpringBone_GetParentSpringManager_m2EF5EEAD6A918133FD9764553417AC48DFA1FFFC,
+	SpringBone_Start_mD3A1B5A5741C88E5F1E5E78D1F240988C6A75FE8,
+	SpringBone_UpdateSpring_m563B11D579B08B95288B55147BFD689E29AFBF57,
+	SpringBone_OnDrawGizmos_m64E49BD4101A6F6ECC5B4F2911A4D7B2F8D794E4,
+	SpringBone__ctor_m5F7CB0E2F09C896DB710A315A08D37A5B1DB71D0,
+	SpringCollider_OnDrawGizmosSelected_m63A394E92FAEBF84C28965F8FCD500D12F27D256,
+	SpringCollider__ctor_mA26CACF7A33B317BCA3499E2B294BB27EF72D625,
+	SpringManager_Start_mD305CD11707A925B1B000E6A07141999A7C1F123,
+	SpringManager_LateUpdate_m2FE72C1CD6E59331A9C6ADCF9387D6CC07EF0523,
+	SpringManager_UpdateParameters_m6E6FA51F314E6A2A89335ECBF0A2A647956C4AFF,
+	SpringManager_UpdateParameter_m3FA6606799DF6E9A680B7194AB11D10875C49B64,
+	SpringManager__ctor_m8D72467F6ECC021FCCF1441AEAEDBCA5FA71C18A,
 };
-static const int32_t s_InvokerIndices[23] = 
+static const int32_t s_InvokerIndices[36] = 
 {
-	990,
-	990,
-	783,
-	965,
-	990,
-	852,
-	990,
-	942,
-	965,
-	990,
-	965,
-	852,
-	990,
-	942,
-	965,
-	990,
-	965,
-	990,
-	990,
-	990,
-	990,
-	990,
-	990,
+	1005,
+	1005,
+	798,
+	980,
+	1005,
+	867,
+	1005,
+	957,
+	980,
+	1005,
+	980,
+	867,
+	1005,
+	957,
+	980,
+	1005,
+	980,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	797,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	1005,
+	334,
+	1005,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	23,
+	36,
 	s_methodPointers,
 	0,
 	NULL,

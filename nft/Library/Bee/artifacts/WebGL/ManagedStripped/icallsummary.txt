@@ -4,6 +4,7 @@ UnityEngine.AnimationCurve::Internal_Equals
 UnityEngine.AnimationCurve::Internal_Create
 UnityEngine.AnimationCurve::Evaluate
 UnityEngine.AnimationCurve::Internal_Destroy
+UnityEngine.Animations.AnimationLayerMixerPlayable::SetSingleLayerOptimizationInternal
 UnityEngine.Camera::GetAllCamerasCount
 UnityEngine.Camera::GetAllCamerasImpl
 UnityEngine.Camera::get_cullingMask
@@ -41,11 +42,14 @@ UnityEngine.Experimental.Rendering.GraphicsFormatUtility::GetDepthStencilFormatF
 UnityEngine.Experimental.Rendering.GraphicsFormatUtility::GetGraphicsFormat_Native_RenderTextureFormat
 UnityEngine.Experimental.Rendering.GraphicsFormatUtility::GetGraphicsFormat_Native_TextureFormat
 UnityEngine.Experimental.Rendering.ScriptableRuntimeReflectionSystemSettings::ScriptingDirtyReflectionSystemInstance
+UnityEngine.GameObject::GetComponentsInternal
 UnityEngine.GameObject::Internal_CreateGameObject
 UnityEngine.GameObject::SendMessage
 UnityEngine.GameObject::GetComponent
 UnityEngine.GameObject::TryGetComponentInternal
 UnityEngine.GameObject::get_transform
+UnityEngine.Gizmos::DrawWireSphere_Injected
+UnityEngine.Gizmos::set_color_Injected
 UnityEngine.Gradient::Internal_Equals
 UnityEngine.Gradient::Init
 UnityEngine.Gradient::Cleanup
@@ -99,6 +103,8 @@ UnityEngine.Physics::Internal_RaycastAll_Injected
 UnityEngine.PhysicsScene::Internal_RaycastTest_Injected
 UnityEngine.PhysicsScene::Internal_Raycast_Injected
 UnityEngine.PhysicsScene::Internal_RaycastNonAlloc_Injected
+UnityEngine.Playables.PlayableHandle::IsValid_Injected
+UnityEngine.Playables.PlayableHandle::GetPlayableType_Injected
 UnityEngine.PlayerConnectionInternal::IsConnected
 UnityEngine.PlayerConnectionInternal::TrySendMessage
 UnityEngine.PlayerConnectionInternal::DisconnectAll
@@ -108,6 +114,8 @@ UnityEngine.PlayerConnectionInternal::RegisterInternal
 UnityEngine.PlayerConnectionInternal::SendMessage
 UnityEngine.PlayerConnectionInternal::UnregisterInternal
 UnityEngine.QualitySettings::get_activeColorSpace
+UnityEngine.Quaternion::FromToRotation_Injected
+UnityEngine.Quaternion::Lerp_Injected
 UnityEngine.Quaternion::LookRotation_Injected
 UnityEngine.Quaternion::Slerp_Injected
 UnityEngine.Random::RandomRangeInt
@@ -138,11 +146,15 @@ UnityEngine.Texture2DArray::Internal_CreateImpl
 UnityEngine.Texture3D::Internal_CreateImpl
 UnityEngine.Time::get_deltaTime
 UnityEngine.Transform::get_childCount
+UnityEngine.Transform::TransformDirection_Injected
 UnityEngine.Transform::get_localPosition_Injected
+UnityEngine.Transform::get_localRotation_Injected
 UnityEngine.Transform::get_position_Injected
 UnityEngine.Transform::get_rotation_Injected
 UnityEngine.Transform::set_localPosition_Injected
+UnityEngine.Transform::set_localRotation_Injected
 UnityEngine.Transform::set_position_Injected
 UnityEngine.Transform::set_rotation_Injected
 UnityEngine.Transform::GetChild
+UnityEngine.Transform::GetParent
 UnityEngine.U2D.SpriteAtlasManager::Register
