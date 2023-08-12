@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,8 @@ public class ClickFollower : MonoBehaviour
     public AnimationCurve turn;
 
     private Rigidbody _rigidbody;
+
+    private Quaternion _lookrotation;
     
     // Start is called before the first frame update
     void Start()
@@ -30,26 +33,22 @@ public class ClickFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                    
         //find the vector pointing from our position to the target
         var direction = (target.position - transform.position).normalized;
             
         //create the rotation we need to be in to look at the target
-        var lookRotation = Quaternion.LookRotation(direction);
-        
+        _lookrotation = Quaternion.LookRotation(direction);
+
         if (Input.GetMouseButtonDown(0))
         {
-            StopCoroutine(Turn(Quaternion.identity));
+            StopCoroutine(Turn());
             StopCoroutine(Movement());
             moving = false;
-            StartCoroutine(Turn(lookRotation));
+            StartCoroutine(Turn());
         }
-        
-        if(moving)
-            transform.rotation = lookRotation;
     }
 
-    IEnumerator Turn(Quaternion lookRotation)
+    IEnumerator Turn()
     {
         float turnTimer = 0;
         while (turnTimer < turnDuration)
@@ -57,11 +56,16 @@ public class ClickFollower : MonoBehaviour
             turnTimer += Time.deltaTime;
 
             //rotate us over time according to speed until we are in the required rotation
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, turn.Evaluate(turnTimer/turnDuration));
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookrotation, turn.Evaluate(turnTimer/turnDuration*(1-Quaternion.Dot(transform.rotation, _lookrotation))));
+
+            // This line of code reduces the force when the hook is close to target to avoid oscillation and make the movement converge
+            if(_rigidbody.drag<3)
+                _rigidbody.drag += 0.5f*Time.deltaTime;
             yield return null;
         }
         
         moving = true;
+        _rigidbody.drag = 0;
         StartCoroutine(Movement());
     }
 
@@ -77,13 +81,24 @@ public class ClickFollower : MonoBehaviour
             var position = transform.position;
             var targetPosition = target.position;
 
-            // Force from hook to target
+            //rotate towards target
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookrotation, 0.5f * Time.deltaTime);
+            _rigidbody.AddForceAtPosition(transform.forward*10*(1-Quaternion.Dot(transform.rotation, _lookrotation)), transform.position, ForceMode.Force);
+            
             _rigidbody.AddForceAtPosition(Vector3.ClampMagnitude(targetPosition - position, maxForce) * forceIntensity, position, ForceMode.Force);
 
             // This line of code reduces the force when the hook is close to target to avoid oscillation and make the movement converge
-            _rigidbody.drag = 3 / Vector3.Distance(targetPosition, position);
+            _rigidbody.drag = 50 / Vector3.Distance(targetPosition, position);
 
             yield return null;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Matrix4x4 rotationMatrix = Matrix4x4.TRS(transform.position, transform.rotation, transform.lossyScale);
+        Gizmos.matrix = rotationMatrix;
+ 
+        Gizmos.DrawWireCube(Vector3.zero, Vector3.zero);
     }
 }

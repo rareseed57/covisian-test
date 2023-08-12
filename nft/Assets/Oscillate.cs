@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,10 +11,13 @@ public class Oscillate : MonoBehaviour
 
     private AnimationCurve _oscillation;
     private Transform _controllerTransform;
+
+    private Rigidbody _rigidbody;
     // Start is called before the first frame update
     void Start()
     {
         _clickFollower = controller.GetComponent<ClickFollower>();
+        _rigidbody = controller.GetComponent<Rigidbody>();
         _oscillation = _clickFollower.oscillation;
         _controllerTransform = controller.transform;
     }
@@ -21,15 +25,17 @@ public class Oscillate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_clickFollower.moving) timer += Time.deltaTime;
-        if (timer > 1) timer = 0;
+        if (Math.Abs(timer - 1) < 0.001) timer = 0;
+        else
+        {
+            if(_clickFollower.moving) timer += Time.deltaTime * _clickFollower.oscillationFrequency;
+        }
+        if (timer > 1) timer = 1;
 
         var transform1 = transform;
-        transform1.position = _controllerTransform.position;
+        
         transform1.rotation = _controllerTransform.rotation;
-
-        transform1.localPosition += new Vector3(0,
-                                                _oscillation.Evaluate(timer*_clickFollower.oscillationFrequency)*_clickFollower.oscillationAmplitude,
-                                                0);
+        transform1.position = _controllerTransform.position +
+                              _controllerTransform.up*_oscillation.Evaluate(timer)*_clickFollower.oscillationAmplitude*_rigidbody.velocity.magnitude/1000;
     }
 }

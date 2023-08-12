@@ -9,9 +9,11 @@ public class ClickParent : MonoBehaviour
     // Start is called before the first frame update
     public Vector3 screenPosition;
     public Vector3 worldPosition;
+    public Vector2 clickDepth;
+
     void Start()
     {
-        transform.position = new Vector3(50, 0, 0);
+        transform.position = new Vector3(50000, 0, 0);
     }
 
     // Update is called once per frame
@@ -28,7 +30,7 @@ public class ClickParent : MonoBehaviour
             }
             
             screenPosition = Input.mousePosition;
-            screenPosition.z = cam.nearClipPlane+7 + Random.Range(-3,+3);
+            screenPosition.z = cam.nearClipPlane + cam.transform.position.z + Random.Range(clickDepth.x,clickDepth.y);
 
             worldPosition = cam.ScreenToWorldPoint(screenPosition);
             transform.position = worldPosition;
