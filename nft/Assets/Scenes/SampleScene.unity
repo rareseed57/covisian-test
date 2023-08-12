@@ -5444,7 +5444,7 @@ MonoBehaviour:
   turnDuration: 2
   maxForce: 300
   forceIntensity: 1
-  oscillationAmplitude: 1000
+  oscillationAmplitude: 500
   oscillationFrequency: 0.1
   moving: 0
   oscillation:

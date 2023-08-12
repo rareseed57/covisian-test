@@ -15,25 +15,23 @@
           <h1><p style="font-family:righteous;">
             Login
          </p></h1>
-         <form>
 
-          <div class="vcenter">
-          <span class="material-symbols-rounded">person</span>
-          <input type="text" placeholder="Username">
-          </div>
+         <form method="POST" action="./login.php">
+            <div class="vcenter">
+            <span class="material-symbols-rounded">person</span>
+            <input type="text" name="username" placeholder="Username" required>
+            </div>
 
-          <div class="vcenter">
-          <span class="material-symbols-rounded">lock</span>
-          <input type="password" placeholder="Password">
-          </div>
+            <div class="vcenter">
+            <span class="material-symbols-rounded">lock</span>
+            <input type="password" name="password" placeholder="Password" required>
+            </div>
 
+            <br>
+            <input class="submit" type="submit" value="LOGIN"></input>
          </form>
-
-         <br>
-         <button><b>LOGIN</b></button>
-
+         
         </div>
-        <iframe src="./build/index.html" style="border:0px #000000 none;" name="Game name" scrolling="no" frameborder="1" marginheight="px" marginwidth="320px" height="320px" width="480px"></iframe>
     </main>
   </body>
 </html>

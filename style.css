@@ -22,23 +22,25 @@ body{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-button{
+.submit{
     background-color: #BED084;
     color: white;
     padding: .7rem;
     border-color: transparent;
     border-radius: .25rem;
+    font-weight: bold;
 }
 
-button:hover{
+.submit:hover{
     background-color: #b5c67b;
 }
 
-button:active{
+.submit:active{
     background-color: rgb(93, 124, 62);
 }
 
 input{
+    color: rgb(116, 116, 116);
     border-radius: 0.2rem;
     border-color: transparent;
     background-color: rgb(239, 239, 239);

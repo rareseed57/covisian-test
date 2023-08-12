@@ -36,6 +36,6 @@ public class Oscillate : MonoBehaviour
         
         transform1.rotation = _controllerTransform.rotation;
         transform1.position = _controllerTransform.position +
-                              _controllerTransform.up*_oscillation.Evaluate(timer)*_clickFollower.oscillationAmplitude*_rigidbody.velocity.magnitude/1000;
+                              _controllerTransform.up*_oscillation.Evaluate(timer)*_clickFollower.oscillationAmplitude; //*_rigidbody.velocity.magnitude/1000
     }
 }
