@@ -10,6 +10,8 @@ public class ClickFollower : MonoBehaviour
     public float turnDuration;
     public float maxForce;
     public float forceIntensity;
+
+    public float steeringVelocity;
     
     public float oscillationAmplitude = 1;
     public float oscillationFrequency = 1;
@@ -27,7 +29,6 @@ public class ClickFollower : MonoBehaviour
     void Start()
     {
         TryGetComponent(out _rigidbody);
-        StartCoroutine(Movement());
     }
 
     // Update is called once per frame
@@ -81,11 +82,9 @@ public class ClickFollower : MonoBehaviour
             var position = transform.position;
             var targetPosition = target.position;
 
-            //rotate towards target
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lookrotation, 0.5f * Time.deltaTime);
-            _rigidbody.AddForceAtPosition(transform.forward*10*(1-Quaternion.Dot(transform.rotation, _lookrotation)), transform.position, ForceMode.Force);
-            
-            _rigidbody.AddForceAtPosition(Vector3.ClampMagnitude(targetPosition - position, maxForce) * forceIntensity, position, ForceMode.Force);
+            //rotate and go towards the target
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookrotation, steeringVelocity * Time.deltaTime);
+            _rigidbody.AddForceAtPosition(Vector3.ClampMagnitude(transform.forward, maxForce) * forceIntensity, position, ForceMode.Force);
 
             // This line of code reduces the force when the hook is close to target to avoid oscillation and make the movement converge
             _rigidbody.drag = 50 / Vector3.Distance(targetPosition, position);
