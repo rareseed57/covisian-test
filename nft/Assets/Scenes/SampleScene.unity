@@ -5722,8 +5722,8 @@ MonoBehaviour:
   boneAxis: {x: 0, y: 1, z: 0}
   radius: 0.05
   isUseEachBoneForceSettings: 0
-  stiffnessForce: 0.01
-  dragForce: 0.4
+  stiffnessForce: 1
+  dragForce: 1
   springForce: {x: 0, y: -0.0001, z: 0}
   colliders: []
   debug: 1
@@ -6269,6 +6269,7 @@ GameObject:
   - component: {fileID: 751884225}
   - component: {fileID: 751884228}
   - component: {fileID: 751884223}
+  - component: {fileID: 751884229}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -6378,7 +6379,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751884222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6453,6 +6454,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &751884229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751884222}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebf5896f3b26af4fad63f22d5075ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  turnDuration: 0
+  maxForce: 0
+  forceIntensity: 0
+  steeringVelocity: 0
+  oscillationAmplitude: 1
+  oscillationFrequency: 1
+  moving: 0
+  oscillation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  turn:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &790896430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8118,7 +8151,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658179813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

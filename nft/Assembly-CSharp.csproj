@@ -47,6 +47,7 @@
      <Compile Include="Assets\SpringCollider.cs" />
      <Compile Include="Assets\SpringBone.cs" />
      <Compile Include="Assets\SpringManager.cs" />
+     <Compile Include="Assets\FollowAndOrbit.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Lib\Editor\PlasticSCM\Localization\images.zh-Hans.txt" />

@@ -1614,10 +1614,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rigidbody_AddForceAtPosition_Injected();
 		Register_UnityEngine_Rigidbody_AddForceAtPosition_Injected();
 
-		//System.Void UnityEngine.Rigidbody::get_velocity_Injected(UnityEngine.Vector3&)
-		void Register_UnityEngine_Rigidbody_get_velocity_Injected();
-		Register_UnityEngine_Rigidbody_get_velocity_Injected();
-
 		//System.Void UnityEngine.Rigidbody::set_drag(System.Single)
 		void Register_UnityEngine_Rigidbody_set_drag();
 		Register_UnityEngine_Rigidbody_set_drag();

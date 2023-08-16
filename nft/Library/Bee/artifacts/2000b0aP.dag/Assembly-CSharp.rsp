@@ -284,6 +284,7 @@
 -r:"Library/Bee/artifacts/2000b0aP.dag/UnityEngine.UI.ref.dll"
 "Assets/ClickFollower.cs"
 "Assets/ClickParent.cs"
+"Assets/FollowAndOrbit.cs"
 "Assets/Oscillate.cs"
 "Assets/SpringBone.cs"
 "Assets/SpringCollider.cs"
