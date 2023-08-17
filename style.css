@@ -60,6 +60,15 @@ input:hover, input:active, input:focus{
     gap: 10px;
 }
 
+.unityFrame{
+    border: none;
+    display:block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 37vh;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(197, 197, 197);
 }

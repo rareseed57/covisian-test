@@ -7,14 +7,16 @@ public class ClickFollower : MonoBehaviour
 {
     public Transform target;
 
-    public float turnDuration;
-    public float maxForce;
-    public float forceIntensity;
+    public float turnDuration = 2;
+    public float maxForce = 300;
+    public float forceIntensity = 100;
 
-    public float steeringVelocity;
-    
-    public float oscillationAmplitude = 1;
-    public float oscillationFrequency = 1;
+    public float steeringVelocity = 1;
+    public float turnBrakingRate = 2f;
+    public float moveBrakingRate = 100f;
+
+    public float oscillationAmplitude = 300;
+    public float oscillationFrequency = 0.2f;
     
     public bool moving = false;
     
@@ -57,11 +59,11 @@ public class ClickFollower : MonoBehaviour
             turnTimer += Time.deltaTime;
 
             //rotate us over time according to speed until we are in the required rotation
-            transform.rotation = Quaternion.Slerp(transform.rotation, _lookrotation, turn.Evaluate(turnTimer/turnDuration*(1-Quaternion.Dot(transform.rotation, _lookrotation))));
+            transform.rotation = Quaternion.Slerp(transform.rotation, _lookrotation, turn.Evaluate(turnTimer/turnDuration));
 
             // This line of code reduces the force when the hook is close to target to avoid oscillation and make the movement converge
             if(_rigidbody.drag<3)
-                _rigidbody.drag += 0.5f*Time.deltaTime;
+                _rigidbody.drag += turnBrakingRate*Time.deltaTime;
             yield return null;
         }
         
@@ -87,7 +89,7 @@ public class ClickFollower : MonoBehaviour
             _rigidbody.AddForceAtPosition(Vector3.ClampMagnitude(transform.forward, maxForce) * forceIntensity, position, ForceMode.Force);
 
             // This line of code reduces the force when the hook is close to target to avoid oscillation and make the movement converge
-            _rigidbody.drag = 50 / Vector3.Distance(targetPosition, position);
+            _rigidbody.drag = moveBrakingRate / Vector3.Distance(targetPosition, position);
 
             yield return null;
         }

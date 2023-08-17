@@ -13,6 +13,8 @@ public class Oscillate : MonoBehaviour
     private Transform _controllerTransform;
 
     private Rigidbody _rigidbody;
+    public float _smoother;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +34,16 @@ public class Oscillate : MonoBehaviour
         }
         if (timer > 1) timer = 1;
 
+        if (!_clickFollower.moving && _smoother>0)
+            _smoother -= Time.deltaTime;
+        
+        if (_clickFollower.moving && _smoother<1)
+            _smoother += Time.deltaTime;
+
         var transform1 = transform;
         
         transform1.rotation = _controllerTransform.rotation;
         transform1.position = _controllerTransform.position +
-                              _controllerTransform.up*_oscillation.Evaluate(timer)*_clickFollower.oscillationAmplitude; //*_rigidbody.velocity.magnitude/1000;
+                              _controllerTransform.up*_oscillation.Evaluate(timer)*_clickFollower.oscillationAmplitude*_smoother; //*_rigidbody.velocity.magnitude/1000;
     }
 }
