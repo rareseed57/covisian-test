@@ -1,7 +1,34 @@
-<?php if($_POST['username']=="admin" && $_POST['password']=="admin"):
-    echo 'Ciao '. $_POST['username'] . ['.'];
-    <iframe src="./build/index.html" style="border:0px #000000 none;" name="Game name" scrolling="no" frameborder="1" marginheight="px" marginwidth="320px" height="320px" width="480px"></iframe>
-?>
-<?php else:
-    
+<style>
+<?php include 'style.css'; ?>
+</style>
+
+<?php
+
+$connection = new mysqli('localhost', 'covisiantest', '', 'my_covisiantest');
+if($connection === false) 
+{
+die("Errore di connessione: " . $mysqli->connect_error);
+}
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$sql = "SELECT username FROM users WHERE username='$username' AND password='$password'";
+if($result = $connection->query($sql))
+{
+	if($result->num_rows > 0)
+    {
+        echo "<iframe src='./build/build.html?param=$username' class='unityFrame'></iframe>";
+    }
+    else
+    {
+    	echo "Invalid username or password.";
+    }
+}
+else{
+	echo "Connection failed: " . $connection->error;
+}
+
+
+$connection->close();
 ?>

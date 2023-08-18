@@ -6554,7 +6554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 218911425}
-  turnDuration: 3
+  turnDuration: 0.5
   maxForce: 300
   forceIntensity: 100
   steeringVelocity: 1
