@@ -47,7 +47,7 @@ The rotation of the object smoothly faces the target over time, and a force is a
 
   `transform.rotation = Quaternion.Slerp(transform.rotation, _lookrotation, turn.Evaluate(turnTimer/turnDuration)); _rigidbody.AddForceAtPosition(Vector3.ClampMagnitude(transform.forward, maxForce) * forceIntensity, position, ForceMode.Force);`
 
- the drag property is then use to steer or brake when the user changes the target position or the target is too close (otherwise the movement could slowly diverge).
+ The `drag` property from Unity's RigidBody is then used to steer or brake when the user changes the target position or the target is too close (otherwise the movement could slowly diverge).
 `_rigidbody.drag += turnBrakingRate*Time.deltaTime; // when the target changes position`
 `_rigidbody.drag = moveBrakingRate / Vector3.Distance(targetPosition, position);`
 
