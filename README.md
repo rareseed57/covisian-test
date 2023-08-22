@@ -1,6 +1,7 @@
 ﻿# Covisian Test
 
 [Try the project here](http://covisiantest.altervista.org/ ) 
+Note: The updates in this branch are marked by ***UPDATE***  for conveniece.
 
 This project allows a user to authenticate using a simple form and access a WebGL Unity build.
 
@@ -33,7 +34,12 @@ Moreover, this page is further edited to catch the username parameter that login
 
 
 # Unity WebGL application 
-The 3D creature was modelled, textured and rigged using Blender, and then exported in .fbx format. Here is a list of the most important GameObjects :
+The first scene contains a custom welcome message and a button to start the interactive experience.
+
+***UPDATE*** 
+**When the button is pressed, a loading message appears and the next (addressable) scene is loaded asynchronously using the addressable unity package.**
+
+The 3D creature in this scene was modelled, textured and rigged using Blender, and then exported in .fbx format. Here is a list of the most important GameObjects :
 
 ## Target
 
@@ -57,6 +63,9 @@ This object is constrained to follow the controller position and rotation, but t
 ## NFT
 
 This GameObject is the parent of the NFT 3D creature. It is constrained to follow the oscillator position and rotation. The bones of the rig have the spring bones scripts attached: this code, distributed by Unity developers and customised as needed, allow the rig to be procedurally animated. In particular, it makes each bone copy the movement of the previous chained bone and delay it to automatically achieve the *overlapping* animation.
+
+***UPDATE***
+**This scene now connects to OpenSea using an API to retrieve information about the nft. In this test, the thumbnail of the nft is downloaded and shown in the scene camera.**
 
 # Known issues
 - Mobile browser are, in general, not supported as far as the interactive application is concerned.
