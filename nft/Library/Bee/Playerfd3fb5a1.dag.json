@@ -869,14 +869,14 @@
       "DebugActionIndex": 6
     },
     {
-      "Annotation": "CopyFiles C:/Users/rares/Desktop/Covisian/covisian-test/dev-build/StreamingAssets/aa/WebGL/scenes_scenes_all_5518de4ef276196b40d9d4ef8fc8493a.bundle",
-      "DisplayName": "Copying scenes_scenes_all_5518de4ef276196b40d9d4ef8fc8493a.bundle",
+      "Annotation": "CopyFiles C:/Users/rares/Desktop/Covisian/covisian-test/dev-build/StreamingAssets/aa/WebGL/scenes_scenes_all_868ec387b1515b32fea06fd1f0b8bde6.bundle",
+      "DisplayName": "Copying scenes_scenes_all_868ec387b1515b32fea06fd1f0b8bde6.bundle",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "Library/com.unity.addressables/aa/WebGL/WebGL/scenes_scenes_all_5518de4ef276196b40d9d4ef8fc8493a.bundle"
+        "Library/com.unity.addressables/aa/WebGL/WebGL/scenes_scenes_all_868ec387b1515b32fea06fd1f0b8bde6.bundle"
       ],
       "Outputs": [
-        "C:/Users/rares/Desktop/Covisian/covisian-test/dev-build/StreamingAssets/aa/WebGL/scenes_scenes_all_5518de4ef276196b40d9d4ef8fc8493a.bundle"
+        "C:/Users/rares/Desktop/Covisian/covisian-test/dev-build/StreamingAssets/aa/WebGL/scenes_scenes_all_868ec387b1515b32fea06fd1f0b8bde6.bundle"
       ],
       "DebugActionIndex": 7
     },

@@ -1402,8 +1402,6 @@ UnityEngine.PlayerConnectionInternal::RegisterInternal
 UnityEngine.PlayerConnectionInternal::SendMessage
 UnityEngine.PlayerConnectionInternal::UnregisterInternal
 UnityEngine.Profiling.Profiler::GetMonoUsedSizeLong
-UnityEngine.Profiling.Profiler::BeginSampleImpl
-UnityEngine.Profiling.Profiler::EndSample
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
 UnityEngine.QualitySettings::get_pixelLightCount
 UnityEngine.QualitySettings::set_pixelLightCount
