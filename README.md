@@ -1,7 +1,9 @@
 ﻿# Covisian Test
 
 [Try the project here](http://covisiantest.altervista.org/ ) 
-Note: The updates in this branch are marked by ***UPDATE***  for conveniece.
+[**Important notes for usage**: you can use the credentials admin/password to login; the first WebGL startup may take some minutes.]
+
+The updates in this branch are marked by ***UPDATE***  for convenience.
 
 This project allows a user to authenticate using a simple form and access a WebGL Unity build.
 
@@ -69,11 +71,5 @@ This GameObject is the parent of the NFT 3D creature. It is constrained to follo
 
 # Known issues
 - Mobile browser are, in general, not supported as far as the interactive application is concerned.
-
-- Microsoft Edge still has some compatibility issues with WebGL builds: using this browser may result in the interactive experience not starting correctly. Google chrome is preferred to run this project.
-
 - Accessing the build URL allows anyone to start the experience without having to authenticate: this issue is voluntarily neglected as it doesn’t fit the scope of this demonstration.
-
-- WebGL builds has different behaviours with respect to the Unity editor play mode. This is probably due to specific optimisations, especially regarding the physics system.
-For this reason, the creature’s movements may result smoother and more pleasant inside the Unity editor. Anyways, this issue does not affect the general performance.
 

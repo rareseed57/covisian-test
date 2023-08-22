@@ -11520,7 +11520,7 @@ IL_0041:
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_13 = __this->___assemblyToIdTable;
 		String_t* L_14 = V_2;
 		RuntimeObject* L_15;
-		L_15 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(22, L_13, L_14);
+		L_15 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(21, L_13, L_14);
 		V_0 = ((*(int64_t*)((int64_t*)(int64_t*)UnBox(L_15, Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var))));
 		V_1 = (bool)0;
 		goto IL_008d;
@@ -11539,7 +11539,7 @@ IL_0065:
 		int64_t L_21 = V_0;
 		int64_t L_22 = L_21;
 		RuntimeObject* L_23 = Box(Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var, &L_22);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, L_19, L_20, L_23);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(22, L_19, L_20, L_23);
 	}
 
 IL_008d:
@@ -22238,16 +22238,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_PrepareConstrainedRegions
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Unsafe_InitBlockUnaligned_m6F2353EB9ABC9320E61629FAEE23948C80BFF03A (uint8_t* ___0_startAddress, uint8_t ___1_value, uint32_t ___2_byteCount, const RuntimeMethod* method) 
-{
-	{
-		uint8_t* L_0 = ___0_startAddress;
-		uint8_t L_1 = ___1_value;
-		uint32_t L_2 = ___2_byteCount;
-		il2cpp_codegen_memset(L_0, L_1, L_2);
-		return;
-	}
-}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
