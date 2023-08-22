@@ -46,12 +46,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Oscillate.cs" />
+     <Compile Include="Assets\OpenSea.cs" />
      <Compile Include="Assets\SpringCollider.cs" />
      <Compile Include="Assets\LoadSpiritScene.cs" />
      <Compile Include="Assets\ClickParent.cs" />
      <Compile Include="Assets\ClickFollower.cs" />
      <Compile Include="Assets\SpringBone.cs" />
      <Compile Include="Assets\SpringManager.cs" />
+     <Compile Include="Assets\OpenSeaAPI.cs" />
      <Compile Include="Assets\UpdateName.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\StdLib.hlsl" />

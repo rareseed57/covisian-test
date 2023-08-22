@@ -335,6 +335,8 @@
 "Assets/ClickFollower.cs"
 "Assets/ClickParent.cs"
 "Assets/LoadSpiritScene.cs"
+"Assets/OpenSea.cs"
+"Assets/OpenSeaAPI.cs"
 "Assets/Oscillate.cs"
 "Assets/SpringBone.cs"
 "Assets/SpringCollider.cs"
