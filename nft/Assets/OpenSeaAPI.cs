@@ -36,7 +36,6 @@ public class OpenSeaAPI : MonoBehaviour
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
         yield return www.SendWebRequest();
 
-        Debug.Log("ping");
         Texture texture = DownloadHandlerTexture.GetContent(www);
         img.texture = texture;
     }
