@@ -35,10 +35,10 @@ public class Oscillate : MonoBehaviour
         if (timer > 1) timer = 1;
 
         if (!_clickFollower.moving && _smoother>0)
-            _smoother -= Time.deltaTime;
+            _smoother -= Time.deltaTime*0.5f;
         
         if (_clickFollower.moving && _smoother<1)
-            _smoother += Time.deltaTime;
+            _smoother += Time.deltaTime*0.5f;
 
         var transform1 = transform;
         

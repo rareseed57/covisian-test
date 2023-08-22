@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -9,34 +7,69 @@ using UnityEngine.UI;
 public class OpenSeaAPI : MonoBehaviour
 {
     [SerializeField] private RawImage img;
+    [SerializeField] private Animator popup;
 
-    void Start()
+    private GameObject _nftTitle;
+    private GameObject _nftCollection;
+    private GameObject _nftId;
+
+    private void Start()
     {
-        FetchNft();
+        _nftTitle = GameObject.FindWithTag("NFTtitleGUI");
+        _nftCollection = GameObject.FindWithTag("NFTcollectionGUI");
+        _nftId = GameObject.FindWithTag("NFTidGUI");
+
+        StartCoroutine(FetchNft());
     }
 
-    private void FetchNft()
+    private IEnumerator FetchNft()
     {
-        var url = "https://api.opensea.io/v2/collection/untitled-collection-4266549728/nfts?limit=1";
-        
-        HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
-        request.Headers.Add("20", "application/json");
-        request.Headers.Add("X-API-KEY", "73f9305e34af46339e397cf6eb9437cd");
-        
-        HttpWebResponse response = (HttpWebResponse) request.GetResponse();
-        StreamReader reader = new StreamReader(response.GetResponseStream());
-        string json = reader.ReadToEnd();
-        OpenSea info = JsonUtility.FromJson<OpenSea>(json);
+        string url = "https://api.opensea.io/v2/collection/3dspirits/nfts?limit=1";
+        UnityWebRequest request;
 
-        StartCoroutine(DownloadImage(info.nfts[0].image_url));
+        do
+        {
+            request = UnityWebRequest.Get(url);
+            request.SetRequestHeader("accept", "application/json");
+            request.SetRequestHeader("X-API-KEY", "73f9305e34af46339e397cf6eb9437cd");
+
+            yield return request.SendWebRequest();
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Request failed: " + request.error);
+                yield return new WaitForSeconds(5);
+            }
+        } while (request.result != UnityWebRequest.Result.Success);
+        
+
+        OpenSea info = JsonUtility.FromJson<OpenSea>(request.downloadHandler.text);
+
+        _nftTitle.GetComponent<TextMeshProUGUI>().text = info.nfts[0].name;
+        _nftCollection.GetComponent<TextMeshProUGUI>().text = info.nfts[0].collection;
+        _nftId.GetComponent<TextMeshProUGUI>().text = info.nfts[0].identifier;
+        
+        yield return StartCoroutine(DownloadImage(info.nfts[0].image_url));
     }
 
-    IEnumerator DownloadImage(string url)
+    private IEnumerator DownloadImage(string url)
     {
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
         yield return www.SendWebRequest();
 
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("Image download failed: " + www.error);
+            yield break;
+        }
+
         Texture texture = DownloadHandlerTexture.GetContent(www);
         img.texture = texture;
+
+        Popup();
+    }
+
+    public void Popup()
+    {
+        popup.enabled = true;
     }
 }

@@ -37,7 +37,7 @@ Moreover, this page is further edited to catch the username parameter that login
 The first scene contains a custom welcome message and a button to start the interactive experience.
 
 ***UPDATE*** 
-**When the button is pressed, a loading message appears and the next (addressable) scene is loaded asynchronously using the addressable unity package.**
+**When the button is pressed, a loading message appears and the next (addressable) scene is loaded asynchronously using the Unity addressable assets management package.**
 
 The 3D creature in this scene was modelled, textured and rigged using Blender, and then exported in .fbx format. Here is a list of the most important GameObjects :
 

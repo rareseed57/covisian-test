@@ -102,4 +102,11 @@ public class ClickFollower : MonoBehaviour
  
         Gizmos.DrawWireCube(Vector3.zero, Vector3.zero);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Target reached");
+        moving = false;
+        StopAllCoroutines();
+    }
 }

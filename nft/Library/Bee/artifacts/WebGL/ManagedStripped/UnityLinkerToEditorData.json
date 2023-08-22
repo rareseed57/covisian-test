@@ -6,25 +6,19 @@
         "dependencies": [
           {
             "name": "AnimationClip",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Animator",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AnimatorController",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 1,
             "icon": null
           },
@@ -36,17 +30,7 @@
           },
           {
             "name": "Avatar",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
-            "dependencyType": 0,
-            "icon": null
-          },
-          {
-            "name": "Behaviour",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -64,17 +48,13 @@
           },
           {
             "name": "PositionConstraint",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "RotationConstraint",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -87,13 +67,29 @@
         ]
       },
       {
+        "name": "AssetBundle",
+        "dependencies": [
+          {
+            "name": "AssetBundle",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Required by UnityWebRequestAssetBundle Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestassetbundle"
+          }
+        ]
+      },
+      {
         "name": "Audio",
         "dependencies": [
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -107,8 +103,7 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -145,8 +140,7 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -159,9 +153,7 @@
           },
           {
             "name": "ComputeShader",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -186,10 +178,15 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "Flare",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -201,8 +198,7 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -228,8 +224,7 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -237,8 +232,7 @@
           {
             "name": "Light",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -258,8 +252,7 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -273,41 +266,33 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Mesh",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -321,8 +306,7 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -330,8 +314,7 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -363,8 +346,7 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -378,8 +360,7 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -411,8 +392,7 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -425,9 +405,7 @@
           },
           {
             "name": "SkinnedMeshRenderer",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -440,8 +418,7 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -473,8 +450,7 @@
           {
             "name": "Texture",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -482,8 +458,7 @@
           {
             "name": "Texture2D",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -519,16 +494,34 @@
             "icon": "package/com.unity.modules.animation"
           },
           {
+            "name": "Required by AssetBundle Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.assetbundle"
+          },
+          {
             "name": "Required by Audio Module",
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.audio"
           },
           {
+            "name": "Required by HotReload Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.hotreload"
+          },
+          {
             "name": "Required by IMGUI Module",
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.imgui"
+          },
+          {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
           },
           {
             "name": "Required by Input Module",
@@ -573,6 +566,12 @@
             "icon": "package/com.unity.modules.subsystems"
           },
           {
+            "name": "Required by TLS Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.tls"
+          },
+          {
             "name": "Required by TextCoreFontEngine Module",
             "scenes": [],
             "dependencyType": 2,
@@ -603,6 +602,24 @@
             "icon": "package/com.unity.modules.uielements"
           },
           {
+            "name": "Required by UnityWebRequest Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequest"
+          },
+          {
+            "name": "Required by UnityWebRequestAssetBundle Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestassetbundle"
+          },
+          {
+            "name": "Required by UnityWebRequestTexture Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequesttexture"
+          },
+          {
             "name": "Required by VR Module",
             "scenes": [],
             "dependencyType": 2,
@@ -623,6 +640,17 @@
         ]
       },
       {
+        "name": "HotReload",
+        "dependencies": [
+          {
+            "name": "Required by AssetBundle Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.assetbundle"
+          }
+        ]
+      },
+      {
         "name": "IMGUI",
         "dependencies": [
           {
@@ -630,6 +658,17 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.uielements"
+          }
+        ]
+      },
+      {
+        "name": "ImageConversion",
+        "dependencies": [
+          {
+            "name": "Required by UnityWebRequestTexture Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequesttexture"
           }
         ]
       },
@@ -713,17 +752,13 @@
         "dependencies": [
           {
             "name": "ParticleSystem",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "ParticleSystemRenderer",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           }
@@ -740,10 +775,8 @@
           },
           {
             "name": "Collider",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -760,17 +793,13 @@
           },
           {
             "name": "Rigidbody",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "SphereCollider",
-            "scenes": [
-              "Assets/Scenes/SpiritScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -809,6 +838,12 @@
             "icon": "package/com.unity.modules.animation"
           },
           {
+            "name": "Required by AssetBundle Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.assetbundle"
+          },
+          {
             "name": "Required by Audio Module",
             "scenes": [],
             "dependencyType": 2,
@@ -821,10 +856,22 @@
             "icon": "package/com.unity.modules.core"
           },
           {
+            "name": "Required by HotReload Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.hotreload"
+          },
+          {
             "name": "Required by IMGUI Module",
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.imgui"
+          },
+          {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
           },
           {
             "name": "Required by Input Module",
@@ -869,6 +916,12 @@
             "icon": "package/com.unity.modules.subsystems"
           },
           {
+            "name": "Required by TLS Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.tls"
+          },
+          {
             "name": "Required by TextCoreFontEngine Module",
             "scenes": [],
             "dependencyType": 2,
@@ -899,6 +952,24 @@
             "icon": "package/com.unity.modules.uielements"
           },
           {
+            "name": "Required by UnityWebRequest Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequest"
+          },
+          {
+            "name": "Required by UnityWebRequestAssetBundle Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestassetbundle"
+          },
+          {
+            "name": "Required by UnityWebRequestTexture Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequesttexture"
+          },
+          {
             "name": "Required by VR Module",
             "scenes": [],
             "dependencyType": 2,
@@ -926,6 +997,17 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.xr"
+          }
+        ]
+      },
+      {
+        "name": "TLS",
+        "dependencies": [
+          {
+            "name": "Required by UnityWebRequest Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequest"
           }
         ]
       },
@@ -1012,8 +1094,7 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1027,8 +1108,7 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Scenes/HomeScene.unity",
-              "Assets/Scenes/SpiritScene.unity"
+              "Assets/Scenes/HomeScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1043,6 +1123,31 @@
       },
       {
         "name": "UIElements",
+        "dependencies": []
+      },
+      {
+        "name": "UnityWebRequest",
+        "dependencies": [
+          {
+            "name": "Required by UnityWebRequestAssetBundle Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestassetbundle"
+          },
+          {
+            "name": "Required by UnityWebRequestTexture Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequesttexture"
+          }
+        ]
+      },
+      {
+        "name": "UnityWebRequestAssetBundle",
+        "dependencies": []
+      },
+      {
+        "name": "UnityWebRequestTexture",
         "dependencies": []
       },
       {
