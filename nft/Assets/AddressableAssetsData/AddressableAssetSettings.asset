@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: 605294353382e8647b2a66ec38b5bcd5
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 657d5a34ddf31927077372e7c8cd2674
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -35,9 +35,9 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 976c795ec51d18141bb9399e62ad8c24
+    m_Id: 48dbd74f0ed5e5b40b311b1ac287aeb7
   m_RemoteCatalogLoadPath:
-    m_Id: 83c7fd1c6eb893941a49cfe574151f41
+    m_Id: 13676497b9aa99446928ebd226525793
   m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
@@ -68,6 +68,20 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: 83c7fd1c6eb893941a49cfe574151f41
         m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+    - m_InheritedParent: 
+      m_Id: 1dfd038c33a5aba4dbf75df5559e062a
+      m_ProfileName: Remote
+      m_Values:
+      - m_Id: 3ed32a69f4e1d474e98e26adaafcf22d
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 48dbd74f0ed5e5b40b311b1ac287aeb7
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 13676497b9aa99446928ebd226525793
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 976c795ec51d18141bb9399e62ad8c24
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 83c7fd1c6eb893941a49cfe574151f41
+        m_Value: https://covisiantest.altervista.org/addressables/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 3ed32a69f4e1d474e98e26adaafcf22d
       m_Name: BuildTarget
