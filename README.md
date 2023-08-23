@@ -67,7 +67,8 @@ This object is constrained to follow the controller position and rotation, but t
 This GameObject is the parent of the NFT 3D creature. It is constrained to follow the oscillator position and rotation. The bones of the rig have the spring bones scripts attached: this code, distributed by Unity developers and customised as needed, allow the rig to be procedurally animated. In particular, it makes each bone copy the movement of the previous chained bone and delay it to automatically achieve the *overlapping* animation.
 
 ***UPDATE***
-**This scene now connects to OpenSea using an API to retrieve information about the nft. In this test, the thumbnail of the nft is downloaded and shown in the scene camera.**
+**This scene now connects to OpenSea using an API to retrieve information about the NFT.**
+**Indeed, some data about the NFT are downloaded and shown in the left bottom corner. An asset from OpenSea (the NFT thumbnail image) is also addressed and loaded into the scene.**
 
 # Known issues
 - Mobile browser are, in general, not supported as far as the interactive application is concerned.
