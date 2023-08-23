@@ -1,6 +1,6 @@
 ﻿# Covisian Test
 
-[Try the project here](http://covisiantest.altervista.org/ ) 
+[Try the project here](https://covisiantest.altervista.org/ ) 
 [**Important notes for usage**: you can use the credentials admin/password to login; the first WebGL startup may take some minutes.]
 
 The updates in this branch are marked by ***UPDATE***  for convenience.
