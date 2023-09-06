@@ -1,4 +1,4 @@
-﻿# Covisian Test
+﻿# Spirit minigame Test
 
 [Try the project here](http://covisiantest.altervista.org/ ) 
 
