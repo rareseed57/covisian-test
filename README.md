@@ -1,6 +1,6 @@
 ﻿# Spirit minigame Test
 
-[Try the project here](http://covisiantest.altervista.org/ ) 
+[Try the project here](https://covisiantest.altervista.org/ ) 
 
 This project allows a user to authenticate using a simple form and access a WebGL Unity build.
 
